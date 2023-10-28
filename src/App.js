@@ -51,18 +51,24 @@ function FlashCards() {
   }
 
   return (
-    <div className="flashcards">
-      {questions.map((question) => (
-        <div
-          key={question.id}
-          onClick={() => handleClick(question.id)}
-          className={question.id === selectedId ? "selected" : ""}
-        >
-          <p>
-            {question.id === selectedId ? question.answer : question.question}
-          </p>
-        </div>
-      ))}
-    </div>
+    <>
+      <h2>Flash cards</h2>
+      <div className="flash-cards">
+        {questions.map((question) => (
+          <div
+            key={question.id}
+            onClick={() => handleClick(question.id)}
+            className={question.id === selectedId ? "selected" : ""}
+          >
+            <p>
+              {question.id === selectedId ? question.answer : question.question}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="bio-box">
+        <a href="https://github.com/KiranPolaki">About me</a>
+      </div>
+    </>
   );
 }

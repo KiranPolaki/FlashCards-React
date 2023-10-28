@@ -35,3 +35,7 @@ div.selected {
   transform: rotate(-1deg);
   transition: 0.2s ease-in;
 }
+
+h2 {
+  text-transform: uppercase;
+}
